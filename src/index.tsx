@@ -3,27 +3,26 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import configureReduxStore from './../src/Store/configureReduxStore'
-import {Provider} from "react-redux";
+import configureReduxStore from './../src/Store/configureReduxStore';
+import { Provider } from 'react-redux';
 import { setupInterceptor } from './Config/base';
 import { BrowserRouter } from 'react-router-dom';
 
 const store = configureReduxStore();
-setupInterceptor(store)
+setupInterceptor(store);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-      <Provider store={store}>
-        <BrowserRouter>
-         <App />
-        </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

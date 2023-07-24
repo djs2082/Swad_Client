@@ -1,0 +1,53 @@
+# Ignore build output
+build/
+dist/
+public/
+
+# Ignore Node.js dependencies
+node_modules
+
+# Ignore TypeScript declaration files
+*.d.ts
+
+# Ignore configuration files
+.eslintignore
+.eslintrc.json
+.prettierrc
+
+# Ignore webpack configuration files
+webpack.config.js
+webpack.config.*.js
+tailwind.config.js
+
+# Ignore git files and directories
+.git/
+.gitignore
+.github
+
+# Ignore IDE specific files and directories
+.idea/
+.vscode/
+*.sublime-*
+*.swp
+*.swo
+
+# Ignore output of code coverage tools
+coverage/
+.nyc_output/
+
+# Ignore generated files
+*.min.js
+*.min.css
+*.min.json
+*.min.html
+
+# Ignore various types of lock files
+yarn.lock
+package-lock.json
+.pnpm-lock.yaml
+.shrinkwrap.yaml
+
+# Ignore other miscellaneous files
+*.log
+*.txt
+*.md

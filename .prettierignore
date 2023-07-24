@@ -1,0 +1,16 @@
+# Ignore artifacts and build directories
+build
+dist
+out
+
+# Ignore version control directories
+.git
+.hg
+.github
+
+# Ignore specific files
+*.min.js
+bundle.js
+
+# Ignore TypeScript definition files
+*.d.ts
