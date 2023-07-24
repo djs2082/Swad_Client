@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { toasterReducer } from '../Config/reducers';
 
 const rootReducer = combineReducers({
-  toasterReducer
+  toasterReducer,
 });
 
 export default rootReducer;
