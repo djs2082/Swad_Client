@@ -1,20 +1,12 @@
-import Toasters from './Components/Toaster';
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { showToaster } from './Config/actions';
+import React from 'react';
+import Toasters from 'src/components/Toaster';
 
-function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(showToaster({ message: 'hi', type: 'error' }));
-  }, []);
-
+const App: React.FC = () => {
   return (
     <div className='App'>
       <Toasters />
     </div>
   );
-}
+};
 
 export default App;

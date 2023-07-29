@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { Error } from './main.types';
-import { showToaster } from './actions';
-import { authHeaders } from './authConstants';
-import { getItemFromStorage } from './service';
+import { Error } from 'src/config/main.types';
+import { showToaster } from 'src/config/actions';
+import { authHeaders } from 'src/config/authConstants';
+import { getItemFromStorage } from 'src/config/service';
 
 const modifiedAxiosInstance = axios.create();
 
@@ -15,7 +15,7 @@ const handleErrors = (store: any, error: Error) => {
 
 const setAuthHeadersInInterceptors = (config: any) => {
   if (!getItemFromStorage('access-token')) {
-    authHeaders.forEach(header => {
+    authHeaders.forEach((header:string) => {
       config.headers.common[header] = getItemFromStorage(header);
     });
   }

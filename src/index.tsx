@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import configureReduxStore from './../src/Store/configureReduxStore';
-import { Provider } from 'react-redux';
-import { setupInterceptor } from './Config/base';
-import { BrowserRouter } from 'react-router-dom';
+import configureReduxStore from 'src/store/configureReduxStore';
+import { setupInterceptor } from 'src/config/base';
+
 
 const store = configureReduxStore();
 setupInterceptor(store);
+
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

@@ -1,4 +1,4 @@
-import { Toaster } from './main.types';
+import { Toaster } from 'src/config/main.types';
 export const getItemFromStorage = (key: string): string | null =>
   window.sessionStorage.getItem(key);
 
@@ -16,7 +16,7 @@ const generateUUID = () => {
 
 export const createToaster = (options: Toaster) => ({
   type: options.type || 'success',
-  id: options.id || generateUUID,
+  id: options.id || generateUUID(),
   message: options.message || 'Something went wrong!',
   timeout: options.timeout || 3000,
 });
