@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { toasterReducer } from 'src/config/reducers';
+import { toasterReducer } from 'Config/reducers';
 
 const rootReducer = combineReducers({
   toasterReducer,

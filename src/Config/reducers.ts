@@ -1,10 +1,11 @@
-import { Toaster, Action } from 'src/config/main.types';
-import { toasterConstants } from 'src/config/constants';
+import { Toaster, Action } from 'Config/main.types';
+import { toasterConstants } from 'Config/constants';
 
 const intialToasters = {
   toasters: [],
 };
 
+// eslint-disable-next-line import/prefer-default-export
 export const toasterReducer = (state = intialToasters, action: Action) => {
   switch (action.type) {
     case toasterConstants.SHOW_TOASTER:

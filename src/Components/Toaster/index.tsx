@@ -1,10 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { difference } from 'src/config/service';
-import { Toaster } from 'src/config/main.types.ts';
-import { removeToaster } from 'src/config/actions';
-import FlashMessage from './FlashMessage.tsx';
+import { difference } from 'Config/service';
+import { Toaster } from 'Config/main.types';
+import { removeToaster } from 'Config/actions';
+import FlashMessage from './FlashMessage';
 
 const Toasters = (): JSX.Element => {
   const dispatch = useDispatch();

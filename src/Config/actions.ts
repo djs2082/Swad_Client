@@ -1,6 +1,6 @@
-import { Toaster } from 'src/config/main.types';
-import { toasterConstants } from 'src/config/constants';
-import { createToaster } from 'src/config/service';
+import { Toaster } from 'Config/main.types';
+import { createToaster } from 'Config/service';
+import { toasterConstants } from 'Config/constants';
 
 export const showToaster = (payload: Toaster) => ({
   type: toasterConstants.SHOW_TOASTER,

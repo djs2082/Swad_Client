@@ -16,14 +16,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@components/*": ["components/*"],
-      "@config/*": ["config/*"],
-      "@pages/*": ["pages/*"],
-      "@services/*": ["services/*"],
-      "@store/*": ["store/*"],
-      "@/*": ["*"]
+      "Components/*": ["Components/*"],
+      "Config/*": ["Config/*"],
+      "Pages/*": ["Pages/*"],
+      "Services/*": ["Services/*"],
+      "Store/*": ["Store/*"]
     }
   },
   "include": ["src"]

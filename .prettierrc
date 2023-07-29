@@ -12,5 +12,19 @@
   "proseWrap": "preserve",
   "htmlWhitespaceSensitivity": "css",
   "endOfLine": "auto",
-  "embeddedLanguageFormatting": "auto"
+  "embeddedLanguageFormatting": "auto",
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": {
+        "parser": "typescript"
+      }
+    },
+    {
+      "files": "*.tsx",
+      "options": {
+        "parser": "typescript"
+      }
+    }
+  ]
 }
