@@ -1,5 +1,5 @@
 import React from 'react';
-import Toasters from 'src/components/Toaster';
+import Toasters from 'Components/Toaster';
 
 const App: React.FC = () => {
   return (

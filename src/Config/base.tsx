@@ -1,8 +1,10 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
-import { Error } from 'src/config/main.types';
-import { showToaster } from 'src/config/actions';
-import { authHeaders } from 'src/config/authConstants';
-import { getItemFromStorage } from 'src/config/service';
+import { Error } from 'Config/main.types';
+import { showToaster } from 'Config/actions';
+import { authHeaders } from 'Config/authConstants';
+import { getItemFromStorage } from 'Config/service';
 
 const modifiedAxiosInstance = axios.create();
 
@@ -13,23 +15,25 @@ const handleErrors = (store: any, error: Error) => {
   return Promise.reject(error);
 };
 
-const setAuthHeadersInInterceptors = (config: any) => {
+const setAuthHeadersInInterceptors = (configInParams: any) => {
+  const config = configInParams;
+
   if (!getItemFromStorage('access-token')) {
-    authHeaders.forEach((header:string) => {
+    authHeaders.forEach((header: string) => {
       config.headers.common[header] = getItemFromStorage(header);
     });
   }
   return config;
 };
 
-export const setupInterceptor = (store: Object) => {
+export const setupInterceptor = (store: object) => {
   modifiedAxiosInstance.interceptors.response.use(
     (response: any) => response,
     (error: Error) => handleErrors(store, error)
   );
 
   modifiedAxiosInstance.interceptors.request.use(
-    (config: Object) => setAuthHeadersInInterceptors(config),
-    (error: Object) => Promise.reject(error)
+    (config: object) => setAuthHeadersInInterceptors(config),
+    (error: object) => Promise.reject(error)
   );
 };

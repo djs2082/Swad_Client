@@ -1,6 +1,7 @@
 import React from 'react';
 import Alert from '@mui/material/Alert';
-import { Toaster } from '@/src/config/main.types';
+import { Toaster } from 'Config/main.types';
+
 interface FlashMessageProps {
   toast: Toaster;
   messageType: 'success' | 'info' | 'warning' | 'error';

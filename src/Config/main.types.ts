@@ -1,5 +1,5 @@
 type PayloadType = {
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 export type Action = {
