@@ -1,6 +1,5 @@
-import { Toaster } from './main.types';
-import { Action } from './main.types';
-import { toasterConstants } from './constants';
+import { Toaster, Action } from 'src/config/main.types';
+import { toasterConstants } from 'src/config/constants';
 
 const intialToasters = {
   toasters: [],
