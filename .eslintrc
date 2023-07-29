@@ -1,11 +1,13 @@
 {
   "extends": [
     "airbnb",
+    "airbnb-typescript",
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["react", "jsx-a11y", "prettier", "react-hooks"],
+  "plugins": ["react", "jsx-a11y", "prettier"],
   "env": {
     "browser": true,
     "jasmine": true,
@@ -15,22 +17,22 @@
     "react": {
       "pragma": "React",
       "version": "detect"
-    },
-    "import/resolver": {
-      "node": {
-        "paths": ["src"]
-      }
     }
   },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "parser": "@typescript-eslint/parser",
   "rules": {
-    "react-hooks/rules-of-hooks": "off", // Enforce Rules of Hooks
-    "react-hooks/exhaustive-deps": "off",
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/lines-between-class-members": "off",
+    "@typescript-eslint/dot-notation": "off",
+    "@typescript-eslint/no-namespace": "off",
     "jsx-a11y/label-has-associated-control": "off",
     "jsx-a11y/label-has-for": "off",
-    "import/prefer-default-export": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
-    "import/no-unresolved": "off",
-    "no-unused-vars": "off",
+    "no-console": "off",
+    "no-bitwise": "off",
     "react/function-component-definition": [
       2,
       {
@@ -39,5 +41,13 @@
       }
     ]
   },
-  "ignorePatterns": ["**/*.test.js", "**/*.test.jsx", "postcss.config.js"]
+  "ignorePatterns": ["**/*.test.ts", "**/*.test.tsx", "postcss.config.js"],
+  "overrides": [
+    {
+      "files": ["*reducer*.ts"],
+      "rules": {
+        "@typescript-eslint/default-param-last": "off"
+      }
+    }
+  ]
 }
