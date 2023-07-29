@@ -13,7 +13,7 @@ export type Error = {
 };
 
 export type Toaster = {
-  type?: string;
+  type?: 'success' | 'info' | 'warning' | 'error';
   id?: number;
   message?: string;
   timeout?: number;
