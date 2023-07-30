@@ -1,13 +1,16 @@
-import { Toaster } from 'Config/main.types';
-import { createToaster } from 'Config/service';
-import { toasterConstants } from 'Config/constants';
+import { ToasterType } from 'components/Toaster/types';
+import { createToaster } from 'components/Toaster/services';
+import {
+  SHOW_TOASTER,
+  REMOVE_TOASTER,
+} from 'components/Toaster/Model/constants';
 
-export const showToaster = (payload: Toaster) => ({
-  type: toasterConstants.SHOW_TOASTER,
+export const showToaster = (payload: ToasterType) => ({
+  type: SHOW_TOASTER,
   payload: createToaster(payload),
 });
 
-export const removeToaster = (payload: Toaster) => ({
-  type: toasterConstants.REMOVE_TOASTER,
+export const removeToaster = (payload: ToasterType) => ({
+  type: REMOVE_TOASTER,
   payload,
 });

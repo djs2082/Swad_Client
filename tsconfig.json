@@ -18,11 +18,11 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
     "paths": {
-      "Components/*": ["Components/*"],
-      "Config/*": ["Config/*"],
-      "Pages/*": ["Pages/*"],
-      "Services/*": ["Services/*"],
-      "Store/*": ["Store/*"]
+      "Components/*": ["components/*"],
+      "Config/*": ["config/*"],
+      "Pages/*": ["pages/*"],
+      "Services/*": ["services/*"],
+      "Store/*": ["store/*"]
     }
   },
   "include": ["src"]
