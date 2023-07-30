@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import './index.css';
-import configureReduxStore from 'Store/configureReduxStore';
-import { setupInterceptor } from 'Config/base';
+import configureReduxStore from 'store/configureReduxStore';
+import { setupInterceptor } from 'config/base';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const store = configureReduxStore();
 setupInterceptor(store);
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
