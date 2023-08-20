@@ -1,0 +1,10 @@
+.menu-tile-wrapper {
+  min-width: calc(((var(--device-width) - 16px) / 2) - 8px);
+  max-height: calc(((var(--device-height) - 16px) / 2) - 8px);
+  height: 200px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

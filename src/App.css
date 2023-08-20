@@ -1,0 +1,10 @@
+:root {
+  --device-height: 100vh;
+  --device-width: 100vw;
+}
+
+.components-wrapper {
+  height: var(--device-height);
+  display: grid;
+  grid-template-rows: 60px calc(var(--device-height) - 120px) 60px;
+}
