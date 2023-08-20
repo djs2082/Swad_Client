@@ -1,0 +1,52 @@
+@mixin display-flex(
+  $direction: null,
+  $justify: null,
+  $align-items: null,
+  $wrap: null
+) {
+  $css: (
+    display: flex,
+    flex-direction: 'row',
+    justify-content: 'center',
+    align-items: 'center',
+    wrap: 'no-wrap',
+  );
+
+  @if $direction {
+    $css: map-merge(
+      $css,
+      (
+        flex-direction: $direction,
+      )
+    );
+  }
+
+  @if $justify {
+    $css: map-merge(
+      $css,
+      (
+        justify-content: $justify,
+      )
+    );
+  }
+
+  @if $align-items {
+    $css: map-merge(
+      $css,
+      (
+        align-items: $align-items,
+      )
+    );
+  }
+
+  @if $wrap {
+    $css: map-merge(
+      $css,
+      (
+        flex-wrap: $wrap,
+      )
+    );
+  }
+
+  // @return $css;
+}

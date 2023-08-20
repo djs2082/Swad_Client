@@ -1,0 +1,17 @@
+.landing-page-wrapper {
+  height: calc(var(--device-height) - 120px);
+  display: grid;
+  grid-template-rows: 60px calc(var(--device-height) - 180px);
+}
+
+.menu-tiles-section {
+  display: flex;
+  column-gap: 16px;
+  row-gap: 16px;
+  flex-wrap: wrap;
+  position: relative;
+  overflow-y: scroll;
+  /* flex-direction: column; */
+  padding: 8px;
+  /* width: calc(var(--device-width) - 16px); */
+}

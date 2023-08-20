@@ -17,12 +17,15 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "src",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "paths": {
       "components/*": ["components/*"],
       "config/*": ["config/*"],
       "pages/*": ["pages/*"],
       "services/*": ["services/*"],
-      "store/*": ["store/*"]
+      "store/*": ["store/*"],
+      "styles/*": ["styles/*"]
     }
   },
   "include": ["src"]

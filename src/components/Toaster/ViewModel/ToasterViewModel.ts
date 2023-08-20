@@ -19,9 +19,7 @@ const useToasterViewModel = () => {
   };
 
   useEffect(() => {
-    console.log(toastersInRedux);
     const newToasters = difference(toastersInRedux, toasters);
-    console.log(newToasters);
     if (newToasters.length)
       newToasters.forEach((toast: ToasterType): void => {
         setTimeout((): void => onRemoveToast(toast.id), toast.timeout);
