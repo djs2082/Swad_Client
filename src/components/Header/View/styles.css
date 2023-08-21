@@ -1,16 +1,16 @@
 .header-wrapper {
   display: flex;
-  .header-info-left {
-    flex: 0.7;
-    .header-info-left-top {
-      display: flex;
-      align-items: center;
-    }
-  }
-  .header-info-right {
+}
+.header-info-left {
+  flex: 0.7;
+  .header-info-left-top {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex: 0.3;
   }
+}
+.header-info-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.3;
 }

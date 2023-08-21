@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Toasters from 'components/Toaster/View';
 import Footer from 'components/Footer/View';
 import LandingPage from 'components/LandingPage/View';
@@ -33,15 +34,22 @@ const App: React.FC = () => {
     <div className='App bg-theme-color'>
       <Toasters />
       <div className='components-wrapper'>
-        {loading ? (
-          <WelcomeHero />
-        ) : (
-          <>
-            <Header />
-            <LandingPage />
-            <Footer />
-          </>
-        )}
+        <Header />
+        <Routes>
+          <Route
+            path='/:restarurant_name/:table_number'
+            element={
+              loading ? (
+                <WelcomeHero />
+              ) : (
+                // <PageWrapper>
+                <LandingPage />
+                // <PageWrapper/>
+              )
+            }
+          />
+        </Routes>
+        <Footer />
       </div>
     </div>
   );
