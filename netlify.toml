@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/:restaurant_name/:table_number"
+  to = "/"
+  force = false
+  query = {path = ":path"}

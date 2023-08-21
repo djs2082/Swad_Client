@@ -27,7 +27,8 @@
       "services/*": ["services/*"],
       "store/*": ["store/*"],
       "styles/*": ["styles/*"],
-      "assets/*": ["assets/*"]
+      "assets/*": ["assets/*"],
+      "common/*": ["common/*"]
     }
   },
   "include": ["src"]

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Toasters from 'components/Toaster/View';
 import Footer from 'components/Footer/View';
@@ -6,28 +6,15 @@ import LandingPage from 'components/LandingPage/View';
 import Header from 'components/Header/View';
 import './App.css';
 import WelcomeHero from 'components/WelcomeHero/View';
+import useAppViewModel from 'common/ViewModel/AppViewModel';
 
 const App: React.FC = () => {
-  const [loading, setLoading] = useState(true);
+  const { setDeviceWidthAndHeight, addSessionDataToStore, loading } =
+    useAppViewModel();
+
   useEffect(() => {
-    const deviceHeight =
-      window.innerHeight ||
-      document.documentElement.clientHeight ||
-      document.body.clientHeight;
-
-    // Set the CSS variable
-    document.documentElement.style.setProperty(
-      '--device-height',
-      `${deviceHeight}px`
-    );
-
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-    // dispatch(showToaster({ message: 'Hello', type: 'error', timeout: 50000 }));
-    // dispatch(
-    //   showToaster({ message: 'Hello World', type: 'success', timeout: 50000 })
-    // );
+    setDeviceWidthAndHeight();
+    addSessionDataToStore();
   }, []);
 
   return (
@@ -37,7 +24,7 @@ const App: React.FC = () => {
         <Header />
         <Routes>
           <Route
-            path='/:restarurant_name/:table_number'
+            path='/'
             element={
               loading ? (
                 <WelcomeHero />
