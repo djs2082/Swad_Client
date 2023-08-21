@@ -1,0 +1,8 @@
+.welcome-hero {
+  height: var(--device-height);
+  width: var(--device-width);
+  .welcome-hero-text {
+    width: calc(100% - 32px);
+    /* height: 240px; */
+  }
+}

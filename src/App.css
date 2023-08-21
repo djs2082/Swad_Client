@@ -5,6 +5,7 @@
 
 .components-wrapper {
   height: var(--device-height);
+  width: var(--device-width);
   display: grid;
   grid-template-rows: 60px calc(var(--device-height) - 120px) 60px;
 }

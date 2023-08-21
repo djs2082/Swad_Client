@@ -20,12 +20,14 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "paths": {
+      "src/*": ["src/*"],
       "components/*": ["components/*"],
       "config/*": ["config/*"],
       "pages/*": ["pages/*"],
       "services/*": ["services/*"],
       "store/*": ["store/*"],
-      "styles/*": ["styles/*"]
+      "styles/*": ["styles/*"],
+      "assets/*": ["assets/*"]
     }
   },
   "include": ["src"]
